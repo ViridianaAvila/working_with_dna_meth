@@ -76,16 +76,10 @@ for row in tsv_reader:
     # 0,2,4,6; 1,3,5,7; 8,10,12,14; 9,11,13,15; 16,17,18; 19,20,21
     # following lines are hacky, but whatever works!
     one_treat_all_reps_meth = False
-    if all([per_sample_meth[0], per_sample_meth[2], per_sample_meth[4],
-            per_sample_meth[6]]): one_treat_all_reps_meth = True
-    if all([per_sample_meth[1], per_sample_meth[3], per_sample_meth[5],
-            per_sample_meth[7]]): one_treat_all_reps_meth = True
-    if all([per_sample_meth[8], per_sample_meth[10], per_sample_meth[12],
-            per_sample_meth[14]]): one_treat_all_reps_meth = True
-    if all([per_sample_meth[9], per_sample_meth[11], per_sample_meth[13],
-            per_sample_meth[15]]): one_treat_all_reps_meth = True
-    if all(per_sample_meth[16:19]): one_treat_all_reps_meth = True
-    if all(per_sample_meth[19:22]): one_treat_all_reps_meth = True
+    if all([per_sample_meth[0], per_sample_meth[1]]): one_treat_all_reps_meth = True
+    if all([per_sample_meth[2], per_sample_meth[3]]): one_treat_all_reps_meth = True
+    if all([per_sample_meth[4], per_sample_meth[5]]): one_treat_all_reps_meth = True
+    if all([per_sample_meth[6], per_sample_meth[7]]): one_treat_all_reps_meth = True
     if not one_treat_all_reps_meth: continue
     
     scaf = row[0]
