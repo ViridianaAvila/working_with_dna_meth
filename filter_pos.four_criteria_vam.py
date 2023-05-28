@@ -43,7 +43,7 @@ for row in tsv_reader:
     pos = int(row[1])
     
     if scaf not in bona_fide_pos:
-        scaf_size = int(scaf.split('size')[-1])
+        scaf_size = int(scaf.split('length_')[-1])
         # scaf_size, due to gap filling etc, tend to be MERELY SUGGESTIVE of
         # the actual length. the scaffolds are usually longer than labelled.
         # to counter this: create an array twice the expected length
